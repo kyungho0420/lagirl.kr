@@ -1,0 +1,118 @@
+/*
+    Project: LA GIRL Request
+    Theme: Chic Modern (Black/White + Pink Accent)
+    Framework: Provider V4 Form
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gowun+Dodum&display=swap');
+
+:root {
+    /* Override Core Theme Colors */
+    --pv-color-bg: #FFFFFF;
+    --pv-color-surface: #F9F9F9;
+    --pv-color-text: #111111;
+    --pv-color-primary: #000000;
+    /* Black Primary (Buttons) */
+    --pv-color-accent: #FF007F;
+    /* Hot Pink Accent */
+    --pv-color-border: #EEEEEE;
+
+    /* Button Overrides */
+    --bg-button: #000000;
+    --bg-button-hover: #FF007F;
+    --text-button: #FFFFFF;
+}
+
+[data-theme="dark"] {
+    --pv-color-bg: #111111;
+    --pv-color-surface: #1A1A1A;
+    --pv-color-text: #F0F0F0;
+    --pv-color-primary: #FFFFFF;
+    --pv-color-accent: #FF66B2;
+    --pv-color-border: #333333;
+
+    --bg-button: #FFFFFF;
+    --bg-button-hover: #FF66B2;
+    --text-button: #000000;
+}
+
+.logo-font {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+}
+
+/* Card Styling */
+.pv-card {
+    border-radius: 4px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+    background-color: var(--pv-color-bg);
+    border: 1px solid var(--pv-color-border);
+}
+
+/* Form Styling Overrides */
+/* Form Styling Overrides */
+.pv-label {
+    /* Override core label color to match Primary (Black) instead of Secondary (Gray) */
+    color: var(--pv-color-primary);
+}
+
+.pv-input,
+.pv-select,
+.pv-textarea {
+    /* Override subtle gray background to explicitly use Surface color */
+    background-color: var(--pv-color-surface);
+}
+
+.pv-input:focus,
+.pv-select:focus,
+.pv-textarea:focus {
+    /* Override focus border color to Accent (Pink) */
+    border-color: var(--pv-color-accent);
+}
+
+/* Button Hover Override */
+.pv-btn--submit {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: #FFFFFF;
+    /* Default White Text */
+}
+
+/* Dark Mode Button Text */
+[data-theme="dark"] {
+    .pv-btn--submit {
+        color: #000000;
+        /* Black Text on White Background */
+    }
+}
+
+.pv-btn--submit:hover {
+    background-color: var(--pv-color-accent);
+    color: #FFFFFF;
+    /* Pink Background -> White Text */
+    transform: translateY(-2px);
+}
+
+/* Header Accent */
+.pv-header__desc {
+    color: var(--pv-color-accent);
+    /* Pink Subtitle */
+    font-weight: 600;
+}
+
+/* Checkbox Theme Override (Pink Accent) */
+.pv-check-input {
+    border-color: #AAAAAA !important;
+    /* Higher Contrast Border */
+}
+
+[data-theme="dark"] {
+    .pv-check-input {
+        border-color: #666666 !important;
+        /* Visible Border on Dark */
+    }
+}
+
+.pv-check-input:checked {
+    background-color: var(--pv-color-accent) !important;
+    border-color: var(--pv-color-accent) !important;
+}

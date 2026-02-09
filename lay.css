@@ -1,0 +1,134 @@
+/*
+    Project: LA GIRL
+    Theme: Chic Modern (Black/White + Pink Accent)
+    Framework: Damso V4
+*/
+
+:root {
+    --damso-color-bg: #FFFFFF;
+    --damso-color-surface: #F9F9F9;
+    --damso-color-text: #111111;
+    --damso-color-primary: #000000;
+    --damso-color-accent: #FF007F;
+    --damso-color-border: #EEEEEE;
+
+    --damso-card-border: #EEEEEE;
+
+    --damso-bg-button: #000000;
+    --damso-bg-button-hover: #FF007F;
+    --damso-text-button: #FFFFFF;
+}
+
+[data-theme="dark"] {
+    --damso-color-bg: #111111;
+    --damso-color-surface: #1A1A1A;
+    --damso-color-text: #F0F0F0;
+    --damso-color-primary: #FFFFFF;
+    --damso-color-accent: #FF66B2;
+    --damso-color-border: #333333;
+
+    --damso-card-border: #333333;
+    --damso-bg-button: #FFFFFF;
+    --damso-bg-button-hover: #FF66B2;
+    --damso-text-button: #000000;
+}
+
+.logo-font,
+.damso-header__title {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+}
+
+body {
+    font-family: 'Poppins', 'Noto Sans KR', sans-serif;
+}
+
+.damso-card {
+    border-radius: 4px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+.damso-card:hover {
+    transform: translateY(-5px);
+}
+
+.damso-header__title {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    font-size: 5rem;
+}
+
+.damso-section h2 .material-symbols-outlined {
+    color: var(--damso-color-accent);
+}
+
+.damso-nav__logo {
+    font-size: 1.5rem;
+}
+
+.damso-footer a {
+    color: var(--damso-color-accent);
+}
+
+.damso-pricing-list {
+    margin-top: 20px;
+    border-top: 1px solid var(--damso-color-border);
+    padding-top: 15px;
+}
+
+.damso-pricing-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.damso-pricing-name {
+    color: var(--damso-color-text);
+}
+
+.damso-pricing-price {
+    font-weight: 600;
+    color: var(--damso-color-primary);
+}
+
+.damso-process-item__step {
+    display: inline-block;
+    background: var(--damso-color-accent);
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.damso-text-accent {
+    color: var(--damso-color-accent);
+    font-weight: 700;
+}
+
+/* [Extracted Styles] */
+.lagirl-diet-pricing {
+    max-width: 600px;
+    margin: 40px auto 0;
+}
+
+.lagirl-pricing-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.lagirl-btn-group-mt {
+    margin-top: 30px;
+}
+
+.lagirl-map {
+    border: 0;
+    display: block;
+    filter: grayscale(100%);
+}
+
+.lagirl-address-block {
+    text-align: center;
+    margin-top: 20px;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="../section/home/1.webp">
+    <link rel="icon" href="../images/favicon.ico">
+    <title data-lang="home_title">LA GIRL - Application</title>
+
+    <!-- [Tier 1] Damso Core -->
+    <link rel="stylesheet" href="https://cdn.dam.so/_inc/express/v4/core/core.css">
+    <script src="https://cdn.dam.so/_inc/express/v4/core/core.js"></script>
+
+    <!-- [Tier 2] Damso View: Form -->
+    <link rel="stylesheet" href="https://cdn.dam.so/_inc/express/v4/view/form.css">
+    <script src="https://cdn.dam.so/_inc/express/v4/view/form.js"></script>
+
+    <!-- [Tier 3] User Custom -->
+    <link rel="stylesheet" href="./lay.css">
+    <script src="./lay.js" defer></script>
+</head>
+
+<body class="pv-body">
+
+    <div class="pv-app">
+        <div class="pv-container">
+
+            <header class="pv-header">
+                <h1 class="pv-header__title logo-font">LA GIRL</h1>
+                <p class="pv-header__description" data-lang="home_description">Registration Form</p>
+            </header>
+
+            <!-- Language Switcher -->
+            <nav class="pv-lang-switcher">
+                <a href="?lang=ko" class="pv-lang-btn" data-lang-set="ko">KO</a>
+                <a href="?lang=en" class="pv-lang-btn" data-lang-set="en">EN</a>
+            </nav>
+
+            <form class="pv-card" novalidate>
+
+                <!-- Name -->
+                <div class="pv-group">
+                    <label class="pv-label" data-lang="applicant_name">Name</label>
+                    <input type="text" name="name" class="pv-input" data-lang-placeholder="ph_name" required>
+                </div>
+
+                <!-- Contact -->
+                <div class="pv-group">
+                    <label class="pv-label" data-lang="applicant_contact">Contact</label>
+                    <input type="tel" name="contact" class="pv-input" data-lang-placeholder="ph_contact" required>
+                </div>
+
+                <!-- Visitor Count -->
+                <div class="pv-group">
+                    <label class="pv-label" data-lang="visitor_count">Count</label>
+                    <select name="visitor_count" class="pv-select" required>
+                        <option value="1" data-lang="visitor_count_one">1</option>
+                        <option value="2" data-lang="visitor_count_two">2</option>
+                        <option value="3" data-lang="visitor_count_three">3</option>
+                    </select>
+                </div>
+
+                <!-- Program -->
+                <div class="pv-group">
+                    <label class="pv-label" data-lang="program">Program</label>
+                    <select name="service" class="pv-select" required>
+                        <option value="" data-lang="program_select">Select...</option>
+                        <option value="1:1 Private Lesson" data-lang="services_01">1:1</option>
+                        <option value="6:1 Group Lesson" data-lang="services_02">6:1</option>
+                        <option value="Vinyasa/Healing Yoga" data-lang="services_03">Yoga</option>
+                        <option value="Diet Program" data-lang="services_04">Diet</option>
+                    </select>
+                    <p class="pv-note" data-lang="services_desc"></p>
+                </div>
+
+                <!-- Date & Time -->
+                <div class="pv-group">
+                    <label class="pv-label" data-lang="reservation_datetime">Date</label>
+                    <div style="display: flex; gap: 10px;">
+                        <input type="date" name="reservation_date" class="pv-input" required style="flex: 2;">
+                        <select name="reservation_hour" class="pv-select" style="flex: 1;">
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="13:00">13:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="19:00">19:00</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- File Upload -->
+                <div class="pv-group">
+                    <label class="pv-label" data-lang="ex_file_upload_title">Files</label>
+                    <div class="pv-file-wrapper">
+                        <input type="file" name="attachments[]" class="pv-file-input" multiple
+                            accept=".jpg,.jpeg,.png,.webp">
+                        <div class="pv-file-label" data-lang="ex_file_default_label">Select Files</div>
+                    </div>
+                    <div class="pv-file-status"></div>
+                    <button type="button" class="pv-file-reset-all">Reset All</button>
+                </div>
+
+                <!-- Message -->
+                <div class="pv-group">
+                    <label class="pv-label" data-lang="additional_requests_title">Message</label>
+                    <textarea name="message" class="pv-textarea" data-lang-placeholder="ph_requests"
+                        rows="4"></textarea>
+                </div>
+
+                <input type="hidden" name="form" value="lagirl_request">
+
+                <!-- Submit -->
+                <div class="pv-submit-area">
+                    <div class="pv-check-group">
+                        <input type="checkbox" name="agree" id="agree" class="pv-check-input" required>
+                        <label for="agree" class="pv-check-label" data-lang="label_agree">Agree</label>
+                    </div>
+                    <button type="submit" class="pv-btn pv-btn--submit pv-btn--full">
+                        <span data-lang="submit_button">Submit</span>
+                    </button>
+                </div>
+
+            </form>
+
+            <footer>
+                &copy; LA GIRL Pilates.
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
